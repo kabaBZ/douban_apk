@@ -1,1 +1,0 @@
-DOUBAN_PACKAGE_NAME = 'com.douban.frodo'
