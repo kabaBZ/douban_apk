@@ -35,12 +35,12 @@ function hook_linker_call_constructors() {
             let secmodule = Process.findModuleByName("libmsaoaidsec.so")
             if (secmodule != null) {
                 // debug阶段
-                hook_pthred_create()
+                // hook_pthred_create()
                 // 实践阶段
-                // make_function_null("libmsaoaidsec.so", 0x1CEF8)  // 1c544的上层调用
-                // make_function_null("libmsaoaidsec.so", 0x1B924)  // 1b8d4的上层调用
-                // make_function_null("libmsaoaidsec.so", 0x2701C)  // 26e5c的上层调用
-                // listener.detach()  // 移除hook 防止多次替换，debug阶段不需要detach
+                make_function_null("libmsaoaidsec.so", 0x1CEF8)  // 1c544的上层调用
+                make_function_null("libmsaoaidsec.so", 0x1B924)  // 1b8d4的上层调用
+                make_function_null("libmsaoaidsec.so", 0x2701C)  // 26e5c的上层调用
+                listener.detach()  // 移除hook 防止多次替换，debug阶段不需要detach
             }
         }, onLeave: function (retval) {
             console.log("[-] call_constructors onLeave");
