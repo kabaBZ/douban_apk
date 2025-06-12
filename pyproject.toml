@@ -1,0 +1,10 @@
+[project]
+name = "douban-apk"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "frida==16.5.6",
+    "frida-tools==13.6.0",
+]
