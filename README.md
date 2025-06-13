@@ -1,7 +1,7 @@
 ### 环境搭建
 ```shell
 uv sync
-uv tool install --with frida frida-tools
+uv tool install --with frida==16.5.6 frida-tools==13.6.0
 ```
 
 ### windows环境 
